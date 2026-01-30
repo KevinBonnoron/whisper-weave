@@ -1,0 +1,26 @@
+{
+  "id": "web-search",
+  "name": "Web Search",
+  "description": "Search the web using Brave Search API or DuckDuckGo",
+  "version": "1.1.0",
+  "icon": "search",
+  "entry": "./src/index.ts",
+  "features": ["tools"],
+  "configSchema": [
+    {
+      "name": "apiKey",
+      "type": "secret",
+      "label": "Brave API Key",
+      "description": "Optional - enables Brave Search when provided. Falls back to DuckDuckGo if not set.",
+      "required": false
+    },
+    {
+      "name": "maxResults",
+      "type": "number",
+      "label": "Max Results",
+      "description": "Maximum number of search results (1-10)",
+      "required": false,
+      "default": 5
+    }
+  ]
+}

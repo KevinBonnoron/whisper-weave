@@ -1,0 +1,47 @@
+{
+  "id": "minecraft",
+  "name": "Minecraft",
+  "description": "Control a Minecraft bot: move, look, chat, dig, place blocks, inventory",
+  "version": "1.0.0",
+  "icon": "gamepad",
+  "entry": "./src/index.ts",
+  "features": ["tools"],
+  "configSchema": [
+    {
+      "name": "host",
+      "type": "string",
+      "label": "Server host",
+      "description": "Minecraft server hostname or IP",
+      "required": true,
+      "placeholder": "localhost"
+    },
+    {
+      "name": "port",
+      "type": "number",
+      "label": "Port",
+      "description": "Server port (default 25565)",
+      "required": false,
+      "default": 25565
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "label": "Bot username",
+      "description": "In-game username of the bot",
+      "required": true,
+      "placeholder": "WhisperBot"
+    },
+    {
+      "name": "auth",
+      "type": "select",
+      "label": "Auth",
+      "description": "Authentication: offline for cracked/local servers, microsoft for premium",
+      "required": false,
+      "options": [
+        { "value": "offline", "label": "Offline (cracked)" },
+        { "value": "microsoft", "label": "Microsoft" }
+      ],
+      "default": "offline"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "WhisperWeave",
+  "image": "ghcr.io/nhaef/devcontainer-bun:latest",
+  "features": {
+    "ghcr.io/kevinbonnoron/features/pocketbase:latest": {},
+    "ghcr.io/skriptfabrik/devcontainer-features/mailpit:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Anthropic.claude-code",
+        "biomejs.biome",
+        "github.vscode-github-actions"
+      ]
+    }
+  }
+}

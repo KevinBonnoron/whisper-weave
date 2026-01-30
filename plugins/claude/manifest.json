@@ -1,0 +1,18 @@
+{
+  "id": "claude",
+  "name": "Claude",
+  "description": "Anthropic Claude API",
+  "version": "1.0.0",
+  "icon": "claude",
+  "entry": "./src/index.ts",
+  "features": ["llm-provider"],
+  "configSchema": [
+    {
+      "name": "apiKey",
+      "type": "secret",
+      "label": "API Key",
+      "description": "Anthropic API key",
+      "required": true
+    }
+  ]
+}

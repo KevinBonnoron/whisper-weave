@@ -1,0 +1,25 @@
+{
+  "id": "avatrr",
+  "name": "Avatrr",
+  "description": "Connect to an Avatrr avatar as external channel (WebSocket)",
+  "version": "1.0.0",
+  "icon": "avatrr",
+  "entry": "./src/index.ts",
+  "features": ["connector"],
+  "configSchema": [
+    {
+      "name": "avatrrUrl",
+      "type": "string",
+      "label": "Avatrr URL",
+      "description": "Base URL of the Avatrr instance (e.g. http://localhost:3000)",
+      "required": true
+    },
+    {
+      "name": "avatarId",
+      "type": "string",
+      "label": "Avatar ID",
+      "description": "ID of the avatar to register as external channel",
+      "required": true
+    }
+  ]
+}

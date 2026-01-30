@@ -1,0 +1,19 @@
+{
+  "id": "skills",
+  "name": "Skills",
+  "description": "Access and list markdown skill files",
+  "version": "1.0.0",
+  "icon": "book",
+  "entry": "./src/index.ts",
+  "features": ["tools"],
+  "configSchema": [
+    {
+      "name": "directory",
+      "type": "string",
+      "label": "Directory",
+      "description": "Directory containing skill markdown files",
+      "required": false,
+      "default": "skills"
+    }
+  ]
+}

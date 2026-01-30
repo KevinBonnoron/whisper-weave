@@ -1,0 +1,17 @@
+{
+  "name": "@whisper-weave/plugin-docker",
+  "version": "1.0.0",
+  "description": "Docker plugin for Whisper Weave",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@whisper-weave/plugin-sdk": "workspace:*",
+    "dockerode": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/dockerode": "^3.3.34"
+  }
+}

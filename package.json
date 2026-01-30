@@ -1,0 +1,45 @@
+{
+  "name": "whisper-weave",
+  "version": "0.4.0",
+  "description": "A monorepo template built with Bun, Hono, Vite, and React",
+  "author": "Steve Simkins",
+  "license": "MIT",
+  "homepage": "https://github.com/stevedylandev/bhvr",
+  "packageManager": "bun@1.2.4",
+  "workspaces": {
+    "packages": [
+      "./db",
+      "./server",
+      "./client",
+      "./shared",
+      "./plugins/*"
+    ],
+    "catalog": {
+      "pocketbase": "^0.26.2"
+    }
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "biome lint .",
+    "type-check": "turbo type-check",
+    "test": "turbo test",
+    "format": "biome format . --write"
+  },
+  "keywords": [
+    "bun",
+    "hono",
+    "react",
+    "vite",
+    "monorepo",
+    "turbo"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.14",
+    "bun-types": "latest",
+    "turbo": "^2.5.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

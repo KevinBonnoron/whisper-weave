@@ -1,0 +1,26 @@
+{
+  "id": "telegram",
+  "name": "Telegram",
+  "description": "Connect to Telegram chats and groups via a bot",
+  "version": "1.0.0",
+  "icon": "send",
+  "entry": "./src/index.ts",
+  "features": ["connector", "tools"],
+  "configSchema": [
+    {
+      "name": "botToken",
+      "type": "secret",
+      "label": "Bot Token",
+      "description": "Telegram bot token from @BotFather",
+      "required": true
+    },
+    {
+      "name": "allowedChatIds",
+      "type": "string-list",
+      "label": "Allowed Chat IDs",
+      "description": "Chat IDs to monitor (empty = all chats)",
+      "placeholder": "Chat ID",
+      "required": false
+    }
+  ]
+}

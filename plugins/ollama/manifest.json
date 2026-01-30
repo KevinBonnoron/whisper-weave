@@ -1,0 +1,19 @@
+{
+  "id": "ollama",
+  "name": "Ollama",
+  "description": "Local LLM via Ollama API",
+  "version": "1.0.0",
+  "icon": "ollama",
+  "entry": "./src/index.ts",
+  "features": ["llm-provider"],
+  "configSchema": [
+    {
+      "name": "baseUrl",
+      "type": "string",
+      "label": "Base URL",
+      "description": "Ollama server URL",
+      "required": false,
+      "default": "http://localhost:11434"
+    }
+  ]
+}

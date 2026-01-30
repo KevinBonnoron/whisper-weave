@@ -1,0 +1,25 @@
+{
+  "id": "jellyfin",
+  "name": "Jellyfin",
+  "description": "Search, browse and control media playback on Jellyfin",
+  "version": "1.0.0",
+  "icon": "film",
+  "entry": "./src/index.ts",
+  "features": ["tools"],
+  "configSchema": [
+    {
+      "name": "baseUrl",
+      "type": "string",
+      "label": "Server URL",
+      "description": "Jellyfin server URL (e.g., http://jellyfin.local:8096)",
+      "required": true
+    },
+    {
+      "name": "apiKey",
+      "type": "secret",
+      "label": "API Key",
+      "description": "Jellyfin API key (Settings > API Keys)",
+      "required": true
+    }
+  ]
+}

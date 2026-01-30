@@ -1,0 +1,31 @@
+{
+  "id": "comfyui",
+  "name": "ComfyUI",
+  "description": "Generate images via a local ComfyUI instance",
+  "version": "1.0.0",
+  "icon": "image",
+  "entry": "./src/index.ts",
+  "features": ["tools"],
+  "configSchema": [
+    {
+      "name": "baseUrl",
+      "type": "string",
+      "label": "Base URL",
+      "description": "ComfyUI server URL (e.g., http://localhost:8188)",
+      "required": true
+    },
+    {
+      "name": "workflows",
+      "type": "record",
+      "label": "Workflows",
+      "description": "Workflow templates for each generation type (ComfyUI API format JSON)",
+      "required": false,
+      "keys": [
+        { "value": "txt2img", "label": "Text to Image" },
+        { "value": "img2img", "label": "Image to Image" },
+        { "value": "img2txt", "label": "Image to Text" },
+        { "value": "upscale", "label": "Upscale" }
+      ]
+    }
+  ]
+}

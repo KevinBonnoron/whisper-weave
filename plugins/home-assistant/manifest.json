@@ -1,0 +1,25 @@
+{
+  "id": "home-assistant",
+  "name": "Home Assistant",
+  "description": "Control your smart home via Home Assistant",
+  "version": "1.0.0",
+  "icon": "home",
+  "entry": "./src/index.ts",
+  "features": ["tools"],
+  "configSchema": [
+    {
+      "name": "baseUrl",
+      "type": "string",
+      "label": "Base URL",
+      "description": "Home Assistant URL (e.g., http://homeassistant.local:8123)",
+      "required": true
+    },
+    {
+      "name": "accessToken",
+      "type": "secret",
+      "label": "Access Token",
+      "description": "Long-lived access token from Home Assistant",
+      "required": true
+    }
+  ]
+}

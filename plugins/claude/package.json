@@ -1,0 +1,11 @@
+{
+  "name": "@whisper-weave/plugin-claude",
+  "version": "1.0.0",
+  "description": "Anthropic Claude LLM provider",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "@whisper-weave/plugin-sdk": "workspace:*"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@whisper-weave/plugin-minecraft",
+  "version": "1.0.0",
+  "description": "Control a Minecraft bot via LLM tools",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@whisper-weave/plugin-sdk": "workspace:*",
+    "mineflayer": "^4.21.0",
+    "vec3": "^0.1.8"
+  }
+}

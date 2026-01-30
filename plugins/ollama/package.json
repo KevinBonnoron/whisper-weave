@@ -1,0 +1,11 @@
+{
+  "name": "@whisper-weave/plugin-ollama",
+  "version": "1.0.0",
+  "description": "Local LLM via Ollama API",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "@whisper-weave/plugin-sdk": "workspace:*"
+  }
+}
