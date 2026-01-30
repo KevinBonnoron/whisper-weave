@@ -1,0 +1,26 @@
+{
+  "id": "discord",
+  "name": "Discord",
+  "description": "Connect to Discord servers and channels",
+  "version": "1.0.0",
+  "icon": "discord",
+  "entry": "./src/index.ts",
+  "features": ["connector", "tools"],
+  "configSchema": [
+    {
+      "name": "botToken",
+      "type": "secret",
+      "label": "Bot Token",
+      "description": "Discord bot token from the developer portal",
+      "required": true
+    },
+    {
+      "name": "allowedChannels",
+      "type": "string-list",
+      "label": "Allowed Channels",
+      "description": "Channel IDs to monitor (empty = all channels)",
+      "placeholder": "Channel ID",
+      "required": false
+    }
+  ]
+}

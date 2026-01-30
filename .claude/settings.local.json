@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bunx shadcn@latest add:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(bunx tsc:*)",
+      "Bash(bunx biome:*)"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@whisper-weave/plugin-sdk",
+  "version": "0.1.0",
+  "description": "SDK for building Whisper Weave plugins",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

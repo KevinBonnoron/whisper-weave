@@ -1,0 +1,14 @@
+{
+  "name": "@whisper-weave/plugin-google",
+  "version": "1.0.0",
+  "description": "Google connector plugin for Whisper Weave (Gmail, Calendar)",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@whisper-weave/plugin-sdk": "workspace:*",
+    "googleapis": "^144.0.0"
+  }
+}

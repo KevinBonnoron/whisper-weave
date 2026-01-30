@@ -1,0 +1,43 @@
+{
+  "id": "google",
+  "name": "Google",
+  "description": "Connect to Gmail and access Google Calendar",
+  "version": "1.0.0",
+  "icon": "mail",
+  "entry": "./src/index.ts",
+  "features": ["connector", "tools"],
+  "configSchema": [
+    {
+      "name": "clientId",
+      "type": "string",
+      "label": "Client ID",
+      "description": "Google OAuth Client ID",
+      "required": true
+    },
+    {
+      "name": "clientSecret",
+      "type": "secret",
+      "label": "Client Secret",
+      "description": "Google OAuth Client Secret",
+      "required": true
+    },
+    {
+      "name": "refreshToken",
+      "type": "oauth",
+      "label": "Google Account",
+      "oauth": {
+        "provider": "google",
+        "clientIdField": "clientId",
+        "clientSecretField": "clientSecret"
+      }
+    },
+    {
+      "name": "pollIntervalMs",
+      "type": "number",
+      "label": "Poll Interval (ms)",
+      "description": "How often to check for new emails",
+      "required": false,
+      "default": 30000
+    }
+  ]
+}

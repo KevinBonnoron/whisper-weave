@@ -1,0 +1,19 @@
+{
+  "id": "files",
+  "name": "Files",
+  "description": "Read and write files in a dedicated directory",
+  "version": "1.0.0",
+  "icon": "file",
+  "entry": "./src/index.ts",
+  "features": ["tools"],
+  "configSchema": [
+    {
+      "name": "directory",
+      "type": "string",
+      "label": "Directory",
+      "description": "Base directory for file operations",
+      "required": false,
+      "default": "output"
+    }
+  ]
+}

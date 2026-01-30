@@ -1,0 +1,14 @@
+{
+  "name": "@whisper-weave/db",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "pocketbase serve --http 0.0.0.0:8090 --dir ./pb_data",
+    "migrate:collections": "pocketbase --dir ./pb_data migrate collections"
+  },
+  "dependencies": {
+    "pocketbase": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

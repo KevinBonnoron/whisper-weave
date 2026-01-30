@@ -1,0 +1,49 @@
+{
+  "id": "docker",
+  "name": "Docker",
+  "description": "Manage Docker containers",
+  "version": "1.0.0",
+  "icon": "box",
+  "entry": "./src/index.ts",
+  "features": ["tools"],
+  "configSchema": [
+    {
+      "name": "connectionType",
+      "type": "select",
+      "label": "Connection Type",
+      "required": true,
+      "default": "socket",
+      "options": [
+        { "value": "socket", "label": "Unix Socket" },
+        { "value": "tcp", "label": "TCP" }
+      ]
+    },
+    {
+      "name": "socketPath",
+      "type": "string",
+      "label": "Socket Path",
+      "description": "Docker socket path",
+      "required": false,
+      "default": "/var/run/docker.sock",
+      "showIf": { "field": "connectionType", "equals": "socket" }
+    },
+    {
+      "name": "host",
+      "type": "string",
+      "label": "Host",
+      "description": "Docker host address",
+      "placeholder": "localhost",
+      "required": false,
+      "showIf": { "field": "connectionType", "equals": "tcp" }
+    },
+    {
+      "name": "port",
+      "type": "number",
+      "label": "Port",
+      "description": "Docker port",
+      "required": false,
+      "default": 2375,
+      "showIf": { "field": "connectionType", "equals": "tcp" }
+    }
+  ]
+}
